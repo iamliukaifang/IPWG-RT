@@ -125,10 +125,6 @@ class BasicMesh(object):
 def main():
 
 	# mesh data .obj
-	# fileName = "../mesh/pegasus/pegasus-2x2.obj"
-	# fileName = "../mesh/hexagons-regular/hexagon-8x10.obj"
-	# fileName = "../mesh/hexagons-deformed/hexagon-8x10d.obj"
-	# fileName = "../mesh/square-2×2.obj"
     fileName = "../mesh/triangles/triangle-2×4×4.obj"
     T = BasicMesh( fileName )
 
