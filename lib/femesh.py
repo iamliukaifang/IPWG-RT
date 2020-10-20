@@ -384,29 +384,10 @@ class PolygonMesh(object):
 # --- end of PolygonMesh ---
 
 
-# todo: 
-# class Triangles(PolygonMesh):
-# 	def __init__(self, fileName):
-# 		PolygonMesh.__init__(fileName)
-
-
-
-
-
 def main():
 
 	# mesh data .obj
-	# fileName = "../mesh/pegasus/pegasus-2x2.obj"
-	# fileName = "../mesh/hexagons-regular/hexagon-8x10.obj"
-	# fileName = '../mesh/Lshaped-Lelement/Lshaped-Lelement-5.obj'
-	fileName = '../mesh/quadrangles/quadrangles-2x2.obj'
-	# fileName = ['../mesh/rectangles/rectangles-'+str(3*2**i)+'x'+str(2*2**i)+'.obj' for i in range(0,6)]
-	
-	# fileName = "../mesh/hexagons-deformed/hexagon-8x10d.obj"
-	# fileName = "../mesh/triangles/triangle-2x2x2.obj"
-	# fileName = "../mesh/triangles-Lshaped-uniform/triangle-Lshaped-2x4x4.obj"
-	# fileName = "../mesh/triangles-Lshaped/triangles-Lshaped-2-3.obj"
-	# fileName = "../mesh/triangles-local-refined/triangles-local-refined-2-1.obj"
+	fileName = "./mesh/triangles/triangle-2x2x2.obj"
 
 	# Load basic mesh consisting of vertices and faces
 	basic_mesh = BasicMesh( fileName )
@@ -415,42 +396,6 @@ def main():
 	# T.verts = 2*T.verts-1
 	T.show()
 
-	# 
-	# Triangulation of a element and plot by triangle
-	# 
-	# i=0
-	# ne = T.face_edge_num[i]
-	# points = T.verts[T.face_verts[i,:ne],:]
-	# seg = np.vstack((np.arange(ne), (np.arange(ne)+1)%ne)).T
-	# tri = Delaunay(points, incremental=True)
-	# plt.triplot(points[:,0], points[:,1], tri.simplices)
-	# plt.plot(points[:,0], points[:,1], 'o')
-	# plt.show()
-	
-	# A = dict(vertices=points, segments=seg)
-	# B = tr.triangulate(A, 'pDa')
-	# tr.compare(plt, A, B)
-	# plt.show()
-
-	# A = dict(vertices=points)
-	# t = tr.triangulate(A, 'pq30')
-	# tr.plot(plt.axes(), **t)
-	# plt.show()
-
-
-	# T.from_basic_mesh(basic_mesh = mesh)
-
-	# Title = "Level 1: 26 elements."
-	# T.show(face_label_flag=False, edge_label_flag=False, vert_label_flag=False, mesh_title=Title)
-	# T.show(face_label_flag=True, edge_label_flag=True, vert_label_flag=True, mesh_title=Title)
-	# T.show_with_turtle(speed = 5)
-
-	# for i in range(T.face_edges.shape[0]):
-	# 	print(T.face_verts[i,:], T.get_face_verts(i))
-		# print(T.get_face_verts(i))
-	# print(T.face_areas)
-	# print(T.face_sizes)
-	# print(T.face_centroids)
 
 	print('End.')
 
